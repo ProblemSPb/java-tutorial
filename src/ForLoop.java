@@ -12,7 +12,7 @@ public class ForLoop
     }
 }
 
-// For loop
+// For loop.
 
 /*
 int count;
