@@ -29,4 +29,4 @@ public class DArray {
     }
 }
 
-// 2D arrays + method to add arrays
+// 2D arrays + method to add arrays.
