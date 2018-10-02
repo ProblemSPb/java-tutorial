@@ -8,14 +8,24 @@ public class fibonacci {
 
         System.out.println(num1);
 
-        for (int i=1; i <13; i++) {
+/*        for (int i=1; i <13; i++) {
+            sum = num1 + num2;
+            num1 = num2;
+            num2 = sum;
+            System.out.println(num1);
+        }*/
+
+        int i = 1;
+        while (i < 13) {
+            i++;
             sum = num1 + num2;
             num1 = num2;
             num2 = sum;
             System.out.println(num1);
         }
+
     }
 
 }
 
-// fibonacci for 
+// fibonacci for and while solutions
