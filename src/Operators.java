@@ -10,6 +10,16 @@ public class Operators {
         System.out.println(++i); // 6
         System.out.println(i++); // 6
         System.out.println(i);   // 7
+
+        int a=5, c;
+
+        // b=++a + ++a + a++;
+        // a=++a + ++a + a++;
+        c=a++ + ++a + ++a;
+
+        // System.out.println(a);
+        // System.out.println(b);
+        System.out.println(c);
     }
 }
 
