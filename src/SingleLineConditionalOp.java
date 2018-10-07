@@ -2,8 +2,8 @@ public class SingleLineConditionalOp {
 
     public static void main(String[] args) {
 
-        int age;
-        int height;
+        int age=0;
+        int height=0;
 
         if(age >=18 && age <=16) {
         if(height >180) {
