@@ -4,7 +4,6 @@ public class DArrayTraingle {
 
         int[][] triangle = new int[5][9];
 
-        for ()
 
         // printing of the array below
 
