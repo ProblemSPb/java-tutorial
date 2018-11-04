@@ -13,6 +13,14 @@ public class stringsHomeTask {
         System.out.println(nameArray[1] + " " + nameArray[0]); // swapping name and 2nd name
 
         String email = JOptionPane.showInputDialog("What's your email?");
+
+        /*          another solution
+        String[] split = email.split("@");
+        String beforeAt = split[0];
+        String AfterHost  = split[1].split("\\.")[1];
+        String BeforeHost  = split[1].split("\\.")[0];
+        */
+
         String domain = email .substring(email .indexOf("@") + 1); // getting everything after @
         String domainEnd =domain .substring(domain.indexOf(".") + 1); // getting domain
         String [] emailName = email .split("@"); // splitting to get data before and after @
