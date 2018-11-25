@@ -1,11 +1,36 @@
 import javax.swing.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Locale;
 
 public class dateTime {
 
     public static void main(String[] args) {
+
+
+        System.out.printf("%s%tc", "Due Date is: ", new Date());
+        System.out.println();
+
+        System.out.printf("%1$s %2$tB , %2$tY", "Due date is: ", new Date());
+        System.out.println();
+
+        System.out.printf("%s %tB%<te, %<tY", "Due date is: ", new Date());
+        System.out.println();
+
+        // Gregorian calendar in Java
+        GregorianCalendar cd = new GregorianCalendar();
+
+        GregorianCalendar locale = new GregorianCalendar(Locale.GERMANY);
+
+        cd.set(1990, 12, 8); // setting a new value to the current date cd
+        cd.add(Calendar.DATE, 50); // to add dates/months/years/etc to the date
+
+        System.out.println(cd.getTime()); // printing the date
+
+        /*
 
         SimpleDateFormat df = new SimpleDateFormat("EEE, d MMM yyyy, HH:mm"); // date formatting
         String formattedDate = df.format(new Date());
@@ -33,7 +58,6 @@ public class dateTime {
         }
 
 
-        /*
         // to measure the method performance is below:
         Date dateBefore = new Date();
         doLongOperation();
