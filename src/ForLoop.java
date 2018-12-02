@@ -9,6 +9,17 @@ public class ForLoop
             System.out.println(count);
         }
 
+        System.out.println();
+        
+        // "enhanced for" when working with arrays and Collections.
+        // An enhanced for statement is very useful if you want to get information
+        // from an array without making any changes to it.
+
+        int[] myNumbers = {10, 20, 30, 40, 50};
+
+        for (int item : myNumbers)
+            System.out.println(item);
+
     }
 }
 
