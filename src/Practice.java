@@ -1,13 +1,17 @@
-import javax.swing.*;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class Practice {
 
     public static void main(String[] args) {
+        
+        // in-build method Arrays.sort() to sort arrays
+        //
 
-    String firstName = JOptionPane.showInputDialog("Whats your first name?");
-    String secondName = JOptionPane.showInputDialog("Whats your second name?");
+        int[] nums = {23, 34, 67, 2, 0, 45};
 
-    System.out.println(firstName + "_" + secondName);
+        Arrays.sort(nums);
+        System.out.printf("Sorted []: %s", Arrays.toString(nums)); // to print array without loops
 
     }
 }
