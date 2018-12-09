@@ -17,6 +17,19 @@ class MyClass2 {
             a[i] = i*2;
         }
         return a;
+
+    }
+
+    // below: Primitive types vs reference types in methods
+
+    public void passPrimitive (int primitivePara) { // primitive type parameter
+        primitivePara = 10;                         // tries to change its value and then prints it
+        System.out.println("Value inside method is " + primitivePara);
+    }
+
+    public void passReference (int[] refPara) {      // reference type parameter
+        refPara[1] = 5;                             // tries to change its value and then prints it
+        System.out.println("Value inside method is" + refPara[1]);
     }
 }
 
@@ -32,10 +45,25 @@ public class ArrayMethodDemo {
         int[] myArray2 = amd.returnArray(); // assigned the result of the returnArray() method to a new array
         System.out.println(Arrays.toString(myArray2));
 
+        // Primitive types vs reference types in methods
+        int number = 2;
+        System.out.println("\nnumber before " + number);
+        amd.passPrimitive(number);
+        System.out.println("number after " + number);
+
+        System.out.print("\n");
+
+        System.out.println("myArray[1] before " + myArray[1]);
+        amd.passReference(myArray);
+        System.out.println("myArray[1] after " + myArray[1]);
+
     }
 
 }
 
+
+
 // Using Arrays in Method
 // This method shows how you can use an array as a parameter.
 // returnArray() shows how you can return an array from a method.
+// Primitive types vs reference types in methods
