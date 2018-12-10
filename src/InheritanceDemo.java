@@ -1,3 +1,5 @@
+// parent class for NormalMember
+
 import java.util.Scanner;
 
 public class InheritanceDemo {
@@ -39,7 +41,7 @@ public class InheritanceDemo {
         Scanner input = new Scanner(System.in);
         String password;
         System.out.print("Pls enter admin password: ");
-        input = input.nextLine();
+        password = input.nextLine();
 
         if (!password.equals("abcd")) {
             System.out.println("Invalid password. You do not have access to edit the discount.");
@@ -64,6 +66,35 @@ public class InheritanceDemo {
 
     public void calculateAnnualFee() {
         annualFee = 0;
+    }
+
+    public static void main(String[] args) {
+
+        // creating two objects for the two derived (child) classes.
+        // Behind the scene, the values "James", 1 and 2010 are assigned to the fields name, memberID and memberSince.
+        NormalMember mem1 = new NormalMember("James", 1, 2010);
+        VIPMember mem2 = new VIPMember("Andy", 2, 2011);
+
+        System.out.println();
+
+        // use the calculateAnnualFee() methods in the respective classes
+        mem1.calculateAnnualFee();
+        System.out.println();
+
+        mem2.calculateAnnualFee();
+        System.out.println();
+
+        // use the displayMemberInfo() method from the parent class
+        mem1.displeyMemInfo();
+        System.out.println();
+
+        mem2.displeyMemInfo();
+        System.out.println();
+
+        // modifying the discount (private field)
+        mem1.setDiscount();
+        mem1.calculateAnnualFee();
+        mem1.displeyMemInfo();
     }
 }
 
