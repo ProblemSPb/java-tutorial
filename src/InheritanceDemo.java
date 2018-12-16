@@ -1,5 +1,6 @@
 // parent class for NormalMember
 
+import java.lang.reflect.Member;
 import java.util.Scanner;
 
 public class InheritanceDemo {
@@ -70,7 +71,7 @@ public class InheritanceDemo {
 
     public static void main(String[] args) {
 
-        // creating two objects for the two derived (child) classes.
+/*        // creating two objects for the two derived (child) classes.
         // Behind the scene, the values "James", 1 and 2010 are assigned to the fields name, memberID and memberSince.
         NormalMember mem1 = new NormalMember("James", 1, 2010);
         VIPMember mem2 = new VIPMember("Andy", 2, 2011);
@@ -95,7 +96,24 @@ public class InheritanceDemo {
         mem1.setDiscount();
         mem1.calculateAnnualFee();
         mem1.displeyMemInfo();
+        */
+
+// Polymorphism
+
+        InheritanceDemo[] clubMembers = new InheritanceDemo[6];
+
+        clubMembers[0] = new NormalMember("James", 1, 2010);
+        clubMembers[1] = new NormalMember("Andy", 2, 2011);
+        clubMembers[2] = new NormalMember("Bill", 3, 2011);
+        clubMembers[3] = new VIPMember("Carol", 4, 2012);
+        clubMembers[4] = new VIPMember("Evelyn", 5, 2012);
+        clubMembers[5] = new InheritanceDemo("Yvonne", 6, 2013);
+
+        for (InheritanceDemo m: clubMembers) {
+            m.calculateAnnualFee();
+            m.displeyMemInfo();
+        }
     }
 }
 
-// Inheritance, constructors
+// Inheritance, constructors. Polymorphism.
